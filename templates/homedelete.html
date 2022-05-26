@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<form action="" method="post">{% csrf_token %}
+    <p>Siz rostdanham"{{ home.name }}"nomli uyni o`shirib tashlamoqchimisiz?</p>
+    <input type="submit" value="Confirm">
+</form>
+
+{% endblock content %}

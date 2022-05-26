@@ -1,0 +1,99 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+
+<div class="prod_box_big">
+    <div class="top_prod_box_big"></div>
+    <div class="center_prod_box_big">
+        <div class="home_img_big"><a href=""
+                                        title="header=[Zoom] body=[&nbsp;] fade=[on]"><img
+                src="{{ home.image.url }}" style="width:400px; height:200px;" alt="" border="0"/></a>
+            <div class="thumbs"></div>
+        </div>
+        <div class="details_big_box">
+            <div class="home_title_big">{{ home.name }}</div>
+            <div class="specifications">
+
+                NAME: <span class="blue">{{ home.name }}</span><br/>
+                DESCRIPTION: <span class="blue">{{ home.description }}</span><br/>
+                PRICE: <span class="blue">{{ home.price }}</span><br/>
+                CATEGORT: <span class="blue">{{ home.category }}</span><br/>
+                PUBLIC_DATA: <span class="blue">{{ home.pub_date }}</span><br/>
+                PUBLISHER: <span class="blue">{{ home.publisher }} </span><br/>
+                CITY: <span class="blue">{{ home.city }}</span><br/>
+                
+
+<!-- 
+            </div>
+            <div class="prod_price_big"><span class="reduce">{{ home.name }}</span> <span class="price">{{ home.price }}$</span>
+            </div> <br> -->
+            <br>
+    
+            <h2><a href="{% url 'update' home.pk %}" class="">♻️ EDIT</a></h2> <br>
+        <h2><a href="{% url 'delete' home.pk %}" class="">  🗑 DELETE</a></div>
+    </h2>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="home__item">
+    <div class="home__item__pic set-bg" data-setbg="">
+        <span class="label">New</span>
+        <ul class="home__hover">
+            <li><a href=""><img src="{{ home.image.url }}" alt=""></a></li>
+           
+         
+        </ul>
+    </div>
+  
+
+    <div class="home__item__text">
+        <h6>{{ home.name }}</h6>
+        <a href="" class="add-cart"> + DETAILS </a>
+        <div class="rating">
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+        </div>
+        <h5>${{ home.price }}</h5>
+        <div class="home__color__select">
+            <label for="pc-22">
+                <input type="radio" id="pc-22">
+            </label>
+            <label class="active black" for="pc-23">
+                <input type="radio" id="pc-23">
+            </label>
+            <label class="grey" for="pc-24">
+                <input type="radio" id="pc-24">
+            </label>
+        </div>
+    </div>
+</div> -->
+
+
+    {% endblock content %}
